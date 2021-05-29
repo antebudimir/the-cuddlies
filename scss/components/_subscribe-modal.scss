@@ -1,0 +1,123 @@
+// Subscribe modal
+#subscribe-modal {
+	z-index: 10;
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $modal-background;
+	transition: 0.3s;
+}
+
+.subscribe-title {
+	box-shadow: $box-shadow-2;
+	margin-top: 1.5rem;
+	font-size: 1.1rem;
+	text-align: center;
+
+	@include respond-to-width(1024px) {
+		margin: 0;
+		padding: 0.5rem;
+		font-size: 1.5rem;
+	}
+}
+
+.modal-content {
+	@include flex-center;
+	position: relative;
+	width: 90vw;
+	height: 50vh;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+
+	@include respond-to-width(1024px) {
+		width: 50vw;
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.close-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2rem;
+	height: 2rem;
+	padding: 0.3rem 0;
+	background: $msg-bubble-font;
+	color: $h1-color;
+	font-size: 1.5rem;
+	font-weight: 900;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		color: $close-btn-hover;
+	}
+}
+
+// Subscribe form
+form {
+	text-align: center;
+}
+
+input,
+.subscribe-btn {
+	border-radius: $border-radius-primary;
+	font-size: 1.2rem;
+	box-shadow: $box-shadow-2;
+}
+
+input {
+	border: 2px solid $header-bg;
+	display: block;
+	width: 17rem;
+	height: 2rem;
+	margin: 1.5rem auto 0;
+	background: $h1-color;
+	color: $msg-bubble-font;
+	text-align: center;
+
+	&:focus {
+		border: 1px solid $close-btn-hover;
+		min-width: fit-content;
+		color: $msg-bubble-font;
+	}
+
+	@include respond-to-width(1024px) {
+		width: 20rem;
+		height: 3rem;
+	}
+}
+
+.subscribe-btn {
+	border: 1px solid $overlay-bg;
+	margin-top: 1.5rem;
+	padding: 0.3rem;
+	background: $chat-name-bg;
+	color: $h1-color;
+
+	&:hover,
+	&:focus {
+		@include pop-out-1;
+		background: $header-bg;
+		cursor: pointer;
+	}
+
+	@include respond-to-width(1024px) {
+		width: 6.5rem;
+		height: 2.5rem;
+		font-weight: 700;
+	}
+}

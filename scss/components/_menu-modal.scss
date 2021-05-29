@@ -1,0 +1,93 @@
+// Navigation
+#nav {
+	@include respond-to-width(1024px) {
+		position: sticky;
+		top: 0;
+		min-width: 35%;
+		height: 100%;
+		background: $overlay-bg;
+		overflow-x: hidden; // Necessary for separate scrolling
+	}
+
+	@include respond-to-width(1300px) {
+		min-width: 25.2rem;
+	}
+}
+
+// Menu modal
+#menu-overlay {
+	z-index: 9;
+	overflow: scroll;
+	position: fixed;
+	top: 4.7rem;
+	right: -100%;
+	height: 100%;
+	width: 100%;
+	background: $overlay-bg;
+	transition: 0.4s;
+}
+
+.item-group {
+	display: flex;
+	align-items: center;
+	padding: 0.6rem 1.1rem;
+	box-shadow: $item-group-box-shadow;
+
+	&:last-child {
+		margin-bottom: 5.5rem;
+
+		@include respond-to-width(1024px) {
+			margin-bottom: 0;
+		}
+	}
+
+	@include respond-to-width(1024px) {
+		&:first-child {
+			border-top: 0.1px dotted $chat-name-font;
+		}
+		&:last-child {
+			box-shadow: unset;
+			border-bottom: 0.1px dotted $chat-name-font;
+		}
+
+		&:hover {
+			background-color: $header-bg;
+		}
+
+		&:hover > a,
+		& > #modal-btn {
+			color: $h1-color;
+		}
+	}
+}
+
+.item-img {
+	width: 4rem;
+	height: auto;
+	clip-path: circle(50% at 50% 50%);
+	margin-top: 0.2rem;
+}
+
+.item-link {
+	display: block;
+	width: 100%;
+	margin: 0 0 0 1.5rem;
+	padding: 1.5rem 1rem 1.4rem 0;
+	color: $header-bg;
+	font-size: 1.1rem;
+	font-weight: bolder;
+
+	&:hover,
+	&:focus {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		color: $chat-name-bg;
+		font-size: 1.1rem;
+		@include pop-out-1;
+	}
+
+	@include respond-to-width(1024px) {
+		padding: 1.2rem 1rem 1.1rem 0;
+		line-height: 1.7;
+	}
+}

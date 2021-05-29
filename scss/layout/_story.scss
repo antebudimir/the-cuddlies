@@ -1,0 +1,122 @@
+// Story
+#story,
+#chat {
+	@include flex-layout(column, nowrap);
+}
+
+#story {
+	@include respond-to-width(1024px) {
+		padding: 0 2rem;
+		background: url(../img/bg-4rows2000px.png);
+		background-size: 100% auto;
+		height: 100%;
+		overflow-x: hidden; // Necessary for separate scrolling
+	}
+
+	@include respond-to-width(1300px) {
+		min-width: calc(100% - 25.2rem);
+	}
+}
+
+#chat {
+	padding: 1rem;
+}
+
+.left,
+.right {
+	position: relative;
+	width: max-content;
+	max-width: 90%;
+	margin-bottom: 1rem;
+	padding: 0.5rem 1rem;
+
+	@include respond-to-width(600px) {
+		max-width: 80%;
+	}
+
+	@include respond-to-width(1024px) {
+		max-width: 70%;
+	}
+}
+
+.left {
+	border-radius: $border-radius-left-bubble;
+	background: $h1-color;
+	color: $msg-bubble-font;
+	box-shadow: $box-shadow-1;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -15px;
+		left: -22px;
+		border-right: $pseudo-border transparent;
+		border-top: $pseudo-border $h1-color;
+		border-bottom: $pseudo-border transparent;
+		width: 0px;
+		height: 0px;
+		transform: rotate(110deg);
+	}
+}
+
+.right {
+	align-self: flex-end;
+	border-radius: $border-radius-right-bubble;
+	background: $header-bg;
+	box-shadow: $box-shadow-2;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -25px;
+		right: 5px;
+		border-right: $pseudo-border transparent;
+		border-top: $pseudo-border transparent;
+		border-bottom: $pseudo-border $header-bg;
+		width: 0px;
+		height: 0px;
+		transform: rotate(-60deg);
+	}
+}
+
+// Images in chats
+.chat-img {
+	z-index: 1;
+	max-width: 82%;
+	padding: 0.4rem 0.4rem 0;
+
+	&:hover {
+		@include pop-out-1;
+	}
+
+	@include respond-to-width(768px) {
+		max-width: 33rem;
+	}
+
+	@include respond-to-width(1024px) {
+		max-width: 15rem;
+	}
+
+	@include respond-to-width(1600px) {
+		max-width: 18rem;
+	}
+}
+
+.img-thumb {
+	border-radius: $border-radius-primary;
+	width: 100%;
+	height: auto;
+}
+
+.mobile {
+	@include respond-to-width(1024px) {
+		display: none;
+	}
+}
+
+.desktop {
+	display: none;
+	@include respond-to-width(1024px) {
+		display: initial;
+	}
+}

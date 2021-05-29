@@ -1,0 +1,22 @@
+.scrollButton {
+	@include round-button;
+	border: none;
+	display: none;
+	position: fixed;
+	right: 0.8rem;
+	bottom: 5rem;
+	background-color: $header-bg;
+	color: $h1-color;
+
+	&:hover,
+	&:focus {
+		@include pop-out-2;
+	}
+
+	@include respond-to-width(1024px) {
+		right: 0.8rem;
+		bottom: 8.5rem;
+		left: initial;
+		cursor: pointer;
+	}
+}

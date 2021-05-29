@@ -1,0 +1,37 @@
+// styles related to the scrollbars
+html {
+	scrollbar-color: $header-bg $overlay-bg;
+}
+
+body {
+	scrollbar-color: $chat-name-font $overlay-bg;
+}
+
+body::-webkit-scrollbar {
+	width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+	background: $overlay-bg;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: $header-bg;
+}
+
+#nav::-webkit-scrollbar,
+#story::-webkit-scrollbar {
+	width: 10px;
+}
+
+body,
+#nav,
+#story {
+	scrollbar-width: thin;
+}
+
+#nav::-webkit-scrollbar-thumb,
+#story::-webkit-scrollbar-thumb {
+	border-radius: 15px;
+	background-color: $chat-name-font;
+}

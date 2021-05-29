@@ -1,0 +1,17 @@
+footer {
+	padding: 0.7rem 0 0.5rem;
+	background: $header-bg;
+	font-family: 'Amatic SC', cursive;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.footer-icon {
+	width: 1.7rem;
+
+	&:hover,
+	&:focus {
+		@include pop-out-2;
+	}
+}

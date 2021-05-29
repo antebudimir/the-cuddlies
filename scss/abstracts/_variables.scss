@@ -1,0 +1,22 @@
+// Colors
+$header-bg: rgb(76, 121, 114);
+$chat-name-bg: rgb(154, 87, 45);
+$chat-name-font: rgb(207, 183, 159);
+$msg-bubble-font: rgb(31, 78, 70);
+$h1-color: rgb(255, 255, 255);
+$overlay-bg: rgb(232, 230, 231);
+$modal-background: rgba(0, 0, 0, 0.7);
+$close-btn-hover: rgb(240, 0, 0);
+$facebook-bg: rgb(60, 91, 155);
+$whatsapp-bg: rgb(11, 194, 4);
+
+// Border-radiuses
+$border-radius-primary: 10px;
+$border-radius-left-bubble: 0 0.8rem 0.8rem 0.8rem;
+$border-radius-right-bubble: 0.8rem 0 0.8rem 0.8rem;
+$pseudo-border: 20px solid;
+
+// Shadows
+$item-group-box-shadow: 0px 24px 3px -24px $chat-name-font;
+$box-shadow-1: 2px 2px 2px rgb(102, 102, 102);
+$box-shadow-2: 2px 2px 2px rgb(34, 34, 34);

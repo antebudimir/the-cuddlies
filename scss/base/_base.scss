@@ -1,0 +1,54 @@
+// Base - global styles
+* {
+	outline: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+html {
+	color: $h1-color;
+
+	@include respond-to-width(600px) {
+		font-size: 120%;
+	}
+
+	@include respond-to-w-and-h(2200px, 1200px) {
+		font-size: 150%;
+	}
+
+	@include respond-to-height(2000px) {
+		font-size: 250%;
+	}
+}
+
+html,
+body {
+	@include respond-to-width(1024px) {
+		height: 100%; // Necessary for separate column scrolling
+	}
+}
+
+// Body and subscribe modal background
+#home,
+.modal-content {
+	background: url(../img/bg-2rows1000px.png);
+	background-size: 100% auto;
+}
+
+#home {
+	@include respond-to-width(1024px) {
+		background: none;
+	}
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	color: $h1-color;
+	text-decoration: none;
+}

@@ -1,0 +1,72 @@
+// Header
+header {
+	z-index: 10;
+	position: sticky;
+	top: 0;
+
+	@include respond-to-width(1024px) {
+		display: flex;
+		height: 5.8rem;
+	}
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.6rem 1.8rem 0.6rem 0.6rem;
+	background: $header-bg;
+	color: $h1-color;
+
+	@include respond-to-width(600px) {
+		padding: 1rem 1.8rem 1rem 0.6rem;
+	}
+
+	@include respond-to-width(1024px) {
+		justify-content: initial;
+		width: 35%;
+		padding: 0 1.8rem 0 0.6rem;
+	}
+
+	@include respond-to-width(1300px) {
+		width: 23.7rem;
+	}
+}
+
+.container-2 {
+	@include respond-to-width(1024px) {
+		display: flex;
+		justify-content: center;
+		width: 65%;
+		background: $header-bg;
+		color: $h1-color;
+	}
+
+	@include respond-to-width(1300px) {
+		width: calc(100% - 23.7rem);
+	}
+}
+
+.profile-img {
+	display: block;
+	width: 3.5rem;
+	height: auto;
+	clip-path: circle(50% at 50% 50%);
+
+	@include respond-to-width(1024px) {
+		width: 4rem;
+	}
+}
+
+.profile-link:hover,
+.profile-link:focus,
+.logo:hover,
+.logo:focus {
+	@include respond-to-width(1024px) {
+		@include pop-out-1;
+	}
+}
+
+.logo {
+	margin: 0 auto;
+}

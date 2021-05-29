@@ -1,0 +1,7 @@
+// Desktop wrapper
+#desktop-wrapper {
+	@include respond-to-width(1024px) {
+		display: flex;
+		height: 100%; // Necessary for separate scrolling
+	}
+}

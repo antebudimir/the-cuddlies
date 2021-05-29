@@ -1,0 +1,61 @@
+{
+	"name": "The Cuddlies",
+	"short_name": "Cuddlies",
+	"description": "Illustrated love story in a messaging app format.",
+	"start_url": "https://thecuddlies.aliyabudimir.com/",
+	"scope": ".",
+	"background_color": "#4c7972",
+	"theme_color": "#4c7972",
+	"display": "standalone",
+	"orientation": "portrait",
+	"dir": "ltr",
+	"lang": "en",
+	"categories": [
+		"cuddlies",
+		"story",
+		"illustration",
+		"love",
+		"relationship",
+		"messaging"
+	],
+	"screenshots": [
+		{
+			"src": "img/cuddlies.jpg",
+			"sizes": "1317x1500",
+			"type": "image/jpg"
+		},
+		{
+			"src": "img/06-around-the-world/1.jpg",
+			"sizes": "2000x1698",
+			"type": "image/jpg"
+		},
+		{
+			"src": "img/06-around-the-world/3.jpg",
+			"sizes": "1936x2000",
+			"type": "image/jpg"
+		}
+	],
+	"icons": [
+		{
+			"src": "img/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-384x384.png",
+			"sizes": "384x384",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-256x256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "img/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}
