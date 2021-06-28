@@ -1,6 +1,6 @@
 // Tooltips
 .tooltip {
-	z-index: 100;
+	z-index: 10000;
 	border-radius: $border-radius-primary;
 	padding: 0.5rem;
 	background: $chat-name-bg;
