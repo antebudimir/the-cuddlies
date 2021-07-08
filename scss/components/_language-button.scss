@@ -32,8 +32,8 @@
 }
 
 .croatian:hover,
-.croatian:focus,
 .english:hover,
-.english:focus {
+#language-selector a:focus > .croatian,
+#language-selector a:focus > .english {
 	@include pop-out-2;
 }

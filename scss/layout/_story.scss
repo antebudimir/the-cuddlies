@@ -102,6 +102,10 @@
 	}
 }
 
+.lightbox:focus p > .img-thumb {
+	@include pop-out-1;
+}
+
 .img-thumb {
 	border-radius: $border-radius-primary;
 	width: 100%;
