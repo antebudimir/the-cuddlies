@@ -146,13 +146,13 @@ if (window.innerWidth > 1023) {
 	// Move chat title to the header
 	const chatTitle = document.querySelector('.chat-title');
 	containerTwo.append(chatTitle);
-}
 
-// TOOLTIPS init
-window.addEventListener('load', () => {
-	const tooltip = new iTooltip();
-	tooltip.init();
-});
+	// TOOLTIPS init
+	window.addEventListener('load', () => {
+		const tooltip = new iTooltip();
+		tooltip.init();
+	});
+}
 
 // Date
 const currentYear = document.querySelector('#currentYear');
