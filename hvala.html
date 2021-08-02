@@ -54,22 +54,20 @@
 </head>
 
 <body id="home">
-<!-- HEADER -->
-<header id="header">
-    <div class="container">
-        <!-- img circle -->
-        <a class="profile-link" href="./hr/o-nama.html" title="Priča o stvarnim ljudima koji se kriju iza ''Maza''"><img class="profile-img" src="./img/profile.jpg" alt="Aliya & Ante profilna slika"></a>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <!-- img circle -->
+            <a class="profile-link" href="./hr/o-nama.html" title="Priča o stvarnim ljudima koji se kriju iza ''Maza''"><img class="profile-img" src="./img/profile.jpg" alt="Aliya & Ante profilna slika"></a>
 
-        <a class="logo" href="./hr/index.html" title="Dom Maza"><h1>MAZE</h1></a>
+            <a class="logo" href="./hr/index.html" title="Dom Maza"><h1>MAZE</h1></a>
 
-        <!-- Menu -->
-        <div id="dots-menu">
-            <i id="menu-icon" class="fi-nwsrxx-ellipsis"></i>
-        </div>
-
-        <!-- Menu overlay -->
-        <div id="menu-overlay">
             <nav id="nav">
+                <!-- Menu -->
+                <div id="dots-menu">
+                    <i id="menu-icon" class="fi-nwsrxx-ellipsis"></i>
+                </div>
+
                 <ul class="menu">
                     <li class="item-group">
                         <img class="item-img" src="./img/menu-thumbs/1-menu-thumb.jpg" alt="''Maze'' se grle na jastuku" title="''Maze'' se grle na jastuku">
@@ -132,13 +130,12 @@
                     </li>
                 </ul>
             </nav>
-        </div>
 
-        <!-- Subscribe Modal -->
-        <section id="subscribe-modal">
-            <div class="modal-content">
-                <i class="close-btn fas fa-times" title="Zatvori prozor"></i>
-                
+            <!-- Subscribe Modal -->
+            <section id="subscribe-modal">
+                <div class="modal-content">
+                    <i class="close-btn fas fa-times" title="Zatvori prozor"></i>
+                    
                     <form action="./registracija-handler.php" method="post">
                         <h2 class="subscribe-title">Pridruži se Mazama:</h2>
 
@@ -152,70 +149,71 @@
 
                         <button type="submit" class="subscribe-btn" title="Registriraj se i primaj obavijesti o novim pričama">Pošalji</button>
                     </form>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <!-- STORY -->
+    <main id="story" class="scroll">
+        <article id="chat">
+            <h2 class="chat-title">HVALA TI</h2>
+
+            <div class="left chat-img">
+                <a class="lightbox" href="./img/cuddlies.jpg"><p><img class="img-thumb" src="./img/cuddlies-thumb.jpg" alt="''Maze'' se grle na jastuku" title="''Maze'' se grle na jastuku"></p></a>
             </div>
-        </section>
-</header>
 
-<!-- STORY -->
-<main id="story" class="scroll">
-    <article id="chat">
-        <h2 class="chat-title">HVALA TI</h2>
+            <div class="left">
+                <p>Hvala ti na registraciji. 😊</p>
+            </div>
+        
+            <div class="right">
+                <p>Nema problema! Sad ću sigurno biti među prvima koji će saznati za nove priče o Mazama. 😊</p>
+            </div>
+        
+            <div class="left">
+                <p>Hoćeš 100%! 😉</p>
+            </div>
 
-        <div class="left chat-img">
-            <a class="lightbox" href="./img/cuddlies.jpg"><p><img class="img-thumb" src="./img/cuddlies-thumb.jpg" alt="''Maze'' se grle na jastuku" title="''Maze'' se grle na jastuku"></p></a>
-        </div>
+            <div class="left">
+                <p>Ako ti nije problem, molim te, podijeli ove priče sa svojim prijateljima kako bi i oni mogli uživati u pustolovinama naših Maza 😃</p>
+            </div>
+        
+            <div class="right">
+                <p>Hoću, nemaš brige. Do sljedećeg maženja... 😉 Pozdrav!</p>
+            </div>
 
-        <div class="left">
-            <p>Hvala ti na registraciji. 😊</p>
-        </div>
-    
-        <div class="right">
-            <p>Nema problema! Sad ću sigurno biti među prvima koji će saznati za nove priče o Mazama. 😊</p>
-        </div>
-    
-        <div class="left">
-            <p>Hoćeš 100%! 😉</p>
-        </div>
+            <div class="left">
+                <p>Nema do maženja 😄 Pozdrav!</p>
+            </div>
+        </article>
+    </main>
 
-        <div class="left">
-            <p>Ako ti nije problem, molim te, podijeli ove priče sa svojim prijateljima kako bi i oni mogli uživati u pustolovinama naših Maza 😃</p>
-        </div>
-    
-        <div class="right">
-            <p>Hoću, nemaš brige. Do sljedećeg maženja... 😉 Pozdrav!</p>
-        </div>
+    <!-- Scroll back to top button HR -->
+    <div id="scroll-to-top">
+        <button class="scrollButton" title="Natrag na vrh"><i class="fa fa-angle-double-up fa-2x"></i></button>
 
-        <div class="left">
-            <p>Nema do maženja 😄 Pozdrav!</p>
-        </div>
-    </article>
-</main>
+    </div>
 
-<!-- Scroll back to top button HR -->
-<div id="scroll-to-top">
-    <button class="scrollButton" title="Natrag na vrh"><i class="fa fa-angle-double-up fa-2x"></i></button>
+    <!-- Share buttons HR -->
+    <section id="share-buttons">
+        <h2 class="hidden-visually">Dugmad za dijeljenje na socijalnim mrežama</h2>
+        <ul class="buttons">
+            <li class="bg-facebook"><a href="https://web.facebook.com/sharer.php?u=www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Podijeli na Facebook-u"><i class="fa fa-facebook"></i></a></li>
+            <li class="bg-whatsapp"><a href="whatsapp://send?text=https://www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Podijeli na WhatsApp-u"><i class="fab fa-whatsapp"></i></a></li>
+        </ul>
+    </section>
 
-</div>
+    <!-- FOOTER -->
+    <footer id="footer">
+        <a href="https://www.aliyabudimir.com"><img class="footer-icon" src="./img/icons/icon.png" alt="Aliya Budimir portfolio" title="Aliya Budimir portfolio"></a>
+        <p>COPYRIGHT &copy; 2020. - <span id="currentYear"></span>. ALIYA BUDIMIR</p>
+    </footer>
 
-<!-- Share buttons HR -->
-<section id="share-buttons">
-    <h2 class="hidden-visually">Dugmad za dijeljenje na socijalnim mrežama</h2>
-    <ul class="buttons">
-        <li class="bg-facebook"><a href="https://web.facebook.com/sharer.php?u=www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Podijeli na Facebook-u"><i class="fa fa-facebook"></i></a></li>
-        <li class="bg-whatsapp"><a href="whatsapp://send?text=https://www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Podijeli na WhatsApp-u"><i class="fab fa-whatsapp"></i></a></li>
-    </ul>
-</section>
-
-<!-- FOOTER -->
-<footer id="footer">
-    <a href="https://www.aliyabudimir.com"><img class="footer-icon" src="./img/icons/icon.png" alt="Aliya Budimir portfolio" title="Aliya Budimir portfolio"></a>
-    <p>COPYRIGHT &copy; 2020. - <span id="currentYear"></span>. ALIYA BUDIMIR</p>
-</footer>
-
-<!-- JS -->
-<script src="./js/tobii.min.js" defer></script>
-<script src="./js/iTooltip.js" defer></script>
-<script src="./js/main.js" defer></script>
+    <!-- JS -->
+    <script src="./js/tobii.min.js" defer></script>
+    <script src="./js/iTooltip.js" defer></script>
+    <script src="./js/main.js" defer></script>
 
 </body>
 </html>

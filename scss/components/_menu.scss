@@ -14,17 +14,37 @@
 	}
 }
 
-// Menu modal
-#menu-overlay {
+#dots-menu {
+	@include respond-to-width(1024px) {
+		display: none;
+	}
+}
+
+.fi-nwsrxx-ellipsis,
+.fi-xnsuxx-times-solid {
+	font-size: 1.2rem;
+}
+
+.menu {
 	z-index: 9;
+	display: none;
 	overflow: scroll;
 	position: fixed;
 	top: 4.7rem;
-	right: -100%;
+	right: 0;
 	height: 100%;
 	width: 100%;
 	background: $overlay-bg;
-	transition: 0.4s;
+
+	@include respond-to-width(1024px) {
+		display: initial;
+		overflow: initial;
+		position: initial;
+		top: initial;
+		right: initial;
+		height: initial;
+		width: initial;
+	}
 }
 
 .item-group {

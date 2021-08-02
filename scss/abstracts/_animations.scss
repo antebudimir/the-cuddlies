@@ -1,0 +1,17 @@
+@keyframes slideIn {
+	from {
+		transform: rotateX(90deg);
+	}
+	to {
+		transform: rotateX(0deg);
+	}
+}
+
+@keyframes slideOut {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0);
+	}
+}
