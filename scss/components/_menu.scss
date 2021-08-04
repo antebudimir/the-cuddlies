@@ -20,9 +20,17 @@
 	}
 }
 
+#menu-icon {
+	transition: color 300ms ease-in;
+}
+
 .fi-nwsrxx-ellipsis,
 .fi-xnsuxx-times-solid {
 	font-size: 1.2rem;
+}
+
+.fi-xnsuxx-times-solid {
+	color: rgb(255, 0, 0);
 }
 
 .menu {

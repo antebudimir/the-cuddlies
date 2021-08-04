@@ -130,13 +130,11 @@ const dotsMenu = document.querySelector('#dots-menu'),
 				body.style.overflow = 'hidden';
 				icon.classList.remove('fi-nwsrxx-ellipsis');
 				icon.classList.add('fi-xnsuxx-times-solid');
-				icon.style.transition = 'color 300ms ease-in';
-
-				icon.style.color = 'red';
 			} else {
 				slideOut();
 			}
 
+			// icon change update
 			friconix_update();
 		});
 
@@ -149,8 +147,6 @@ const dotsMenu = document.querySelector('#dots-menu'),
 			body.style.overflow = 'unset';
 			icon.classList.remove('fi-xnsuxx-times-solid');
 			icon.classList.add('fi-nwsrxx-ellipsis');
-
-			icon.style.color = 'unset';
 		}
 	}
 })();
@@ -189,8 +185,10 @@ const dotsMenu = document.querySelector('#dots-menu'),
 })();
 
 // Date
-const currentYear = document.querySelector('#currentYear');
-currentYear.innerText = new Date().getFullYear();
+(function getCurrentDate() {
+	const currentYear = document.querySelector('#currentYear');
+	currentYear.innerText = new Date().getFullYear();
+})();
 
 // Initialize tobii lightbox
 const tobii = new Tobii({
