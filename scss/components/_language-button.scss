@@ -1,7 +1,7 @@
 #language-selector {
 	position: fixed;
-	left: 0.6rem;
 	bottom: 1.1rem;
+	left: 0.6rem;
 
 	@include respond-to-width(1024px) {
 		top: 1.6rem;
@@ -14,8 +14,8 @@
 .croatian,
 .english {
 	display: block;
-	width: 2.9rem;
-	height: 2.9rem;
+	width: 3.4rem;
+	height: 3.4rem;
 
 	@include respond-to-width(1024px) {
 		width: 2.5rem;

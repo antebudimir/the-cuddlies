@@ -24,10 +24,15 @@
 // Round button
 @mixin round-button {
 	z-index: 1;
-	border-radius: 2rem;
-	width: 2.5rem;
-	height: 2.5rem;
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
 	text-align: center;
+
+	@include respond-to-width(1024px) {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
 }
 
 // Animation
