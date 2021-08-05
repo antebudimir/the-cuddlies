@@ -1,45 +1,52 @@
 // Register SW
-(function registerSW() {
-	if ('serviceWorker' in navigator) {
-		// register him
-		navigator.serviceWorker
-			.register('/sw.js', {
-				updateViaCache: 'none',
-				scope: '/',
-			})
-			.then(() => {
-				// finished registering
-			})
-			.catch((err) => {
-				console.warn('Failed to register', err.message);
-			});
-
-		// listen for messages
-		navigator.serviceWorker.addEventListener('message', ({ data }) => {
-			// received a message from the service worker
-			console.log(data, 'New message from your service worker.');
+if ('serviceWorker' in navigator) {
+	// register him
+	navigator.serviceWorker
+		.register('/sw.js', {
+			updateViaCache: 'none',
+			scope: '/',
+		})
+		.then(() => {
+			// finished registering
+		})
+		.catch((err) => {
+			console.warn('Failed to register', err.message);
 		});
-	}
 
-	// SYNC
-	async function registerPeriodicCheck() {
-		const registration = await navigator.serviceWorker.ready;
-		try {
-			await registration.periodicSync.register('latest-update', {
-				minInterval: 24 * 60 * 60 * 1000,
-			});
-		} catch {
-			console.log('Periodic Sync could not be registered!');
-		}
-	}
-
-	navigator.serviceWorker.ready.then((registration) => {
-		registration.periodicSync.getTags().then((tags) => {
-			if (tags.includes('latest-update'))
-				skipDownloadingLatestUpdateOnPageLoad();
-		});
+	// listen for messages
+	navigator.serviceWorker.addEventListener('message', ({ data }) => {
+		// received a message from the service worker
+		console.log(data, 'New message from your service worker.');
 	});
-})();
+}
+
+// SYNC
+async function registerPeriodicCheck() {
+	const registration = await navigator.serviceWorker.ready;
+	try {
+		await registration.periodicSync.register('latest-update', {
+			minInterval: 24 * 60 * 60 * 1000,
+		});
+	} catch {
+		console.log('Periodic Sync could not be registered!');
+	}
+}
+
+navigator.serviceWorker.ready.then((registration) => {
+	registration.periodicSync.getTags().then((tags) => {
+		if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
+	});
+});
+
+// Detect when the PWA was successfully installed
+window.addEventListener('appinstalled', () => {
+	// Hide the app-provided install promotion
+	hideInstallPromotion();
+	// Clear the deferredPrompt so it can be garbage collected
+	deferredPrompt = null;
+	// Send analytics event to indicate successful install
+	console.log('The Cuddlies PWA was installed.');
+});
 
 // SUBSCRIBE modal
 (function subscribe() {
