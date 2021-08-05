@@ -135,17 +135,17 @@
             <!-- Subscribe Modal -->
             <section id="subscribe-modal">
                 <div class="modal-content">
-                    <i class="close-btn fas fa-times" title="Close the window"></i>
+                    <i class="close-btn fa fa-times" title="Close the window"></i>
                     
-                    <form action="subscribe-handler.php" method="post">
+                    <form id="subscribe-form" action="subscribe-handler.php" method="post">
                         <h2 class="subscribe-title">Join the Cuddlies' mailing list:</h2>
 
                         <div class="form-group">
-                            <input type="text" name="name" id="name" placeholder="Your Name" title="Enter your name" required>
+                            <input type="text" name="name" id="name" placeholder="Your Name" title="Enter your name" required minlength="3">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="email" id="email" placeholder="Your Email" title="Enter your email address" required>
+                            <input type="email" name="email" id="email" placeholder="Your Email" title="Enter your email address" required>
                         </div>
                         
                         <button type="submit" class="subscribe-btn" title="Subscribe to the ''Cuddlies'' and receive info about new stories">Subscribe</button>
@@ -507,13 +507,12 @@
         <button class="scrollButton" title="Back to Top"><i class="fa fa-angle-double-up fa-2x"></i></button>
     </div>
 
-    <!-- Share buttons EN -->
-    <section id="share-buttons">
-        <h2 class="hidden-visually">Share buttons</h2>
-        <ul class="buttons">
-            <li class="bg-facebook"><a href="https://web.facebook.com/sharer.php?u=www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
-            <li class="bg-whatsapp"><a href="whatsapp://send?text=https://www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
+    <!-- Sharing links EN -->
+    <section id="sharing-links">
+        <h2 class="hidden-visually">Sharing links</h2>
+
+        <a class="bg-facebook" href="https://web.facebook.com/sharer.php?u=www.thecuddlies.aliyabudimir.com" target="_blank" rel="noopener" title="Share on Facebook"><i class="fa fa-facebook"></i></a>
+        <a class="bg-whatsapp" href="whatsapp://send?text=https://www.thecuddlies.aliyabudimir.com" target="_blank" rel="noopener" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </section>
 
     <!-- FOOTER -->
