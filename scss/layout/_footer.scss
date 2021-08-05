@@ -5,13 +5,16 @@ footer {
 	font-size: 1.3rem;
 	line-height: 1.5;
 	text-align: center;
+
+	& a:focus .footer-icon {
+		@include pop-out-2;
+	}
 }
 
 .footer-icon {
 	width: 1.7rem;
 
-	&:hover,
-	&:focus {
+	&:hover {
 		@include pop-out-2;
 	}
 }
