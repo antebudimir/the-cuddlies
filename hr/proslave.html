@@ -134,19 +134,19 @@
             <!-- Subscribe Modal -->
             <section id="subscribe-modal">
                 <div class="modal-content">
-                    <i class="close-btn fas fa-times" title="Zatvori prozor"></i>
+                    <i class="close-btn fa fa-times" title="Zatvori prozor"></i>
                     
-                    <form action="../registracija-handler.php" method="post">
+                    <form id="subscribe-form" action="../registracija-handler.php" method="post">
                         <h2 class="subscribe-title">Pridruži se Mazama:</h2>
 
                         <div class="form-group">
-                            <input type="text" name="name" id="name" placeholder="Tvoje ime" title="Upiši svoje ime" required>
+                            <input type="text" name="name" id="name" placeholder="Tvoje ime" title="Upiši svoje ime" required minlength="3">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="email" id="email" placeholder="Tvoj email" title="Upiši svoju email adresu" required>
+                            <input type="email" name="email" id="email" placeholder="Tvoj email" title="Upiši svoju email adresu" required>
                         </div>
-
+                        
                         <button type="submit" class="subscribe-btn" title="Registriraj se i primaj obavijesti o novim pričama">Pošalji</button>
                     </form>
                 </div>
@@ -334,13 +334,12 @@
         <button class="scrollButton" title="Natrag na vrh"><i class="fa fa-angle-double-up fa-2x"></i></button>
     </div>
 
-    <!-- Share buttons HR -->
-    <section id="share-buttons">
-        <h2 class="hidden-visually">Dugmad za dijeljenje na socijalnim mrežama</h2>
-        <ul class="buttons">
-            <li class="bg-facebook"><a href="https://web.facebook.com/sharer.php?u=www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Podijeli na Facebook-u"><i class="fa fa-facebook"></i></a></li>
-            <li class="bg-whatsapp"><a href="whatsapp://send?text=https://www.thecuddlies.aliyabudimir.com" target="blank" rel="noopener" title="Podijeli na WhatsApp-u"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
+    <!-- Sharing links HR -->
+    <section id="sharing-links">
+        <h2 class="hidden-visually">Poveznice za dijeljenje na socijalnim mrežama</h2>
+
+        <a class="bg-facebook" href="https://web.facebook.com/sharer.php?u=www.thecuddlies.aliyabudimir.com" target="_blank" rel="noopener" title="Podijeli na Facebook-u"><i class="fa fa-facebook"></i></a>
+        <a class="bg-whatsapp" href="whatsapp://send?text=https://www.thecuddlies.aliyabudimir.com" target="_blank" rel="noopener" title="Podijeli na WhatsApp-u"><i class="fab fa-whatsapp"></i></a>
     </section>
 
     <!-- FOOTER -->
