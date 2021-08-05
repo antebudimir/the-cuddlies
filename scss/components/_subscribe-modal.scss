@@ -1,4 +1,16 @@
 // Subscribe modal
+// Validation
+#subscribe-form {
+	input[type='text'],
+	input[type='email'] {
+		// When input is not empty, not in focus and not valid:
+		&:invalid:not(:focus):not(:placeholder-shown) {
+			background: rgba(251, 255, 0, 0.651);
+			border: 2px solid rgb(255, 0, 0);
+		}
+	}
+}
+
 #subscribe-modal {
 	z-index: 10;
 	display: none;
@@ -51,6 +63,7 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 6px, rgba(0, 0, 0, 0.6) 0px 3px 6px;
 	width: 2rem;
 	height: 2rem;
 	padding: 0.3rem 0;
