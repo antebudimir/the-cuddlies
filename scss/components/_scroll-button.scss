@@ -20,3 +20,11 @@
 		cursor: pointer;
 	}
 }
+
+.icon-arrow-up2 {
+	font-size: 1.6rem;
+
+	&::before {
+		content: '\ea3a';
+	}
+}

@@ -34,6 +34,19 @@
 	@include pop-out-2;
 }
 
-.fi-xwlux2-facebook-circle {
-	margin-bottom: 0.2rem;
+.icon-facebook:before {
+	content: '\ea90';
+}
+
+.icon-whatsapp:before {
+	content: '\ea93';
+}
+
+.icon-facebook,
+.icon-whatsapp {
+	font-size: 1.6rem;
+}
+
+.icon-facebook {
+	margin-top: 0.2rem;
 }

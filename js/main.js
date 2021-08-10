@@ -136,13 +136,10 @@ const dotsMenu = document.querySelector('#dots-menu'),
 
 				body.style.overflow = 'hidden';
 				icon.classList.remove('icon-dots-three-vertical');
-				icon.classList.add('icon-cancel');
+				icon.classList.add('icon-x');
 			} else {
 				slideOut();
 			}
-
-			// icon change update
-			// friconix_update();
 		});
 
 		function slideOut() {
@@ -152,7 +149,7 @@ const dotsMenu = document.querySelector('#dots-menu'),
 			}, 300);
 
 			body.style.overflow = 'unset';
-			icon.classList.remove('icon-cancel');
+			icon.classList.remove('icon-x');
 			icon.classList.add('icon-dots-three-vertical');
 		}
 	}

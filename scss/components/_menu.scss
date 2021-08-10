@@ -15,23 +15,30 @@
 }
 
 #dots-menu {
+	margin-top: 0.3rem;
+
 	@include respond-to-width(1024px) {
 		display: none;
 	}
 }
 
-#menu-icon {
+.icon-dots-three-vertical:before {
+	content: '\e900';
+}
+
+.icon-x:before {
+	content: '\e905';
+}
+
+.icon-dots-three-vertical,
+.icon-x {
+	font-size: 1.6rem;
 	transition: color 300ms ease-in;
 }
 
-// .fi-nwsrxx-ellipsis,
-// .fi-xnsuxx-times-solid {
-// 	font-size: 1.2rem;
-// }
-
-// .fi-xnsuxx-times-solid {
-// 	color: rgb(255, 0, 0);
-// }
+.icon-x {
+	color: rgb(255, 0, 0);
+}
 
 .menu {
 	z-index: 9;
