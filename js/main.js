@@ -1,52 +1,52 @@
-// Register SW
-if ('serviceWorker' in navigator) {
-	// register him
-	navigator.serviceWorker
-		.register('/sw.js', {
-			updateViaCache: 'none',
-			scope: '/',
-		})
-		.then(() => {
-			// finished registering
-		})
-		.catch((err) => {
-			console.warn('Failed to register', err.message);
-		});
+// // Register SW
+// if ('serviceWorker' in navigator) {
+// 	// register him
+// 	navigator.serviceWorker
+// 		.register('/sw.js', {
+// 			updateViaCache: 'none',
+// 			scope: '/',
+// 		})
+// 		.then(() => {
+// 			// finished registering
+// 		})
+// 		.catch((err) => {
+// 			console.warn('Failed to register', err.message);
+// 		});
 
-	// listen for messages
-	navigator.serviceWorker.addEventListener('message', ({ data }) => {
-		// received a message from the service worker
-		console.log(data, 'New message from your service worker.');
-	});
-}
+// 	// listen for messages
+// 	navigator.serviceWorker.addEventListener('message', ({ data }) => {
+// 		// received a message from the service worker
+// 		console.log(data, 'New message from your service worker.');
+// 	});
+// }
 
-// SYNC
-async function registerPeriodicCheck() {
-	const registration = await navigator.serviceWorker.ready;
-	try {
-		await registration.periodicSync.register('latest-update', {
-			minInterval: 24 * 60 * 60 * 1000,
-		});
-	} catch {
-		console.log('Periodic Sync could not be registered!');
-	}
-}
+// // SYNC
+// async function registerPeriodicCheck() {
+// 	const registration = await navigator.serviceWorker.ready;
+// 	try {
+// 		await registration.periodicSync.register('latest-update', {
+// 			minInterval: 24 * 60 * 60 * 1000,
+// 		});
+// 	} catch {
+// 		console.log('Periodic Sync could not be registered!');
+// 	}
+// }
 
-navigator.serviceWorker.ready.then((registration) => {
-	registration.periodicSync.getTags().then((tags) => {
-		if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
-	});
-});
+// navigator.serviceWorker.ready.then((registration) => {
+// 	registration.periodicSync.getTags().then((tags) => {
+// 		if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
+// 	});
+// });
 
-// Detect when the PWA was successfully installed
-window.addEventListener('appinstalled', () => {
-	// Hide the app-provided install promotion
-	hideInstallPromotion();
-	// Clear the deferredPrompt so it can be garbage collected
-	deferredPrompt = null;
-	// Send analytics event to indicate successful install
-	console.log('The Cuddlies PWA was installed.');
-});
+// // Detect when the PWA was successfully installed
+// window.addEventListener('appinstalled', () => {
+// 	// Hide the app-provided install promotion
+// 	hideInstallPromotion();
+// 	// Clear the deferredPrompt so it can be garbage collected
+// 	deferredPrompt = null;
+// 	// Send analytics event to indicate successful install
+// 	console.log('The Cuddlies PWA was installed.');
+// });
 
 // SUBSCRIBE modal
 (function subscribe() {
@@ -135,14 +135,14 @@ const dotsMenu = document.querySelector('#dots-menu'),
 				}, 1);
 
 				body.style.overflow = 'hidden';
-				icon.classList.remove('fi-nwsrxx-ellipsis');
-				icon.classList.add('fi-xnsuxx-times-solid');
+				icon.classList.remove('icon-dots-three-vertical');
+				icon.classList.add('icon-cancel');
 			} else {
 				slideOut();
 			}
 
 			// icon change update
-			friconix_update();
+			// friconix_update();
 		});
 
 		function slideOut() {
@@ -152,8 +152,8 @@ const dotsMenu = document.querySelector('#dots-menu'),
 			}, 300);
 
 			body.style.overflow = 'unset';
-			icon.classList.remove('fi-xnsuxx-times-solid');
-			icon.classList.add('fi-nwsrxx-ellipsis');
+			icon.classList.remove('icon-cancel');
+			icon.classList.add('icon-dots-three-vertical');
 		}
 	}
 })();

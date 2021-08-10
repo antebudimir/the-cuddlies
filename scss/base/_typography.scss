@@ -9,6 +9,16 @@
 	src: url(../fonts/CarroisGothic-Regular.woff) format('woff');
 }
 
+@font-face {
+	font-family: 'icomoon';
+	src: url(../icomoon/fonts/icomoon.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'icomoon-svg';
+	src: url(../icomoon/fonts/icomoon.eot) format('eot');
+}
+
 // All fonts declared:
 html {
 	font-family: 'Carrois Gothic';
@@ -62,4 +72,24 @@ p {
 	@include respond-to-width(600px) {
 		line-height: 1.5;
 	}
+}
+
+// Icons
+.icon-clear:before {
+	// font-family: 'icomoon';
+
+	content: '\e901';
+	color: red;
+	font-size: 1.6rem;
+}
+
+.icon-dots-three-vertical:before {
+	content: '\e900';
+	font-size: 1.5rem;
+}
+.icon-facebook:before {
+	content: '\ea90';
+}
+.icon-whatsapp:before {
+	content: '\ea93';
 }

@@ -5,10 +5,6 @@
 	left: 0.8rem;
 	@include flex-layout(column, nowrap);
 
-	& .hidden-visually {
-		@include hidden-visually;
-	}
-
 	@include respond-to-width(1024px) {
 		left: initial;
 		right: 0.8rem;
@@ -20,38 +16,24 @@
 .bg-facebook,
 .bg-whatsapp {
 	@include round-button;
+	@include flex-center;
 }
 
 .bg-facebook {
-	margin-bottom: 1.25rem;
+	margin-bottom: 0.7rem;
 	background: $facebook-bg;
-}
-
-.fa-facebook {
-	padding-top: 0.8rem;
-	font-size: 1.5rem;
-
-	@include respond-to-width(1024px) {
-		padding-top: 0.6rem;
-	}
 }
 
 .bg-whatsapp {
 	background: $whatsapp-bg;
 }
 
-.fa-whatsapp {
-	padding-top: 0.7rem;
-	padding-left: 0.05rem;
-	font-size: 1.7rem;
-
-	@include respond-to-width(1024px) {
-		padding-top: 0.43rem;
-	}
-}
-
 .bg-facebook:hover,
 .bg-whatsapp:hover,
 #sharing-links a:focus {
 	@include pop-out-2;
+}
+
+.fi-xwlux2-facebook-circle {
+	margin-bottom: 0.2rem;
 }
