@@ -4,6 +4,7 @@ const precache = [
 	'/',
 	'/fonts/AmaticSC-Bold.woff',
 	'/fonts/CarroisGothic-Regular.woff',
+	'/fonts/icomoon.woff',
 	'/404.html',
 	'/index.html',
 	'/about-us.html',
