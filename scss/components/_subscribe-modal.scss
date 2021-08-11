@@ -30,7 +30,7 @@
 
 	@include respond-to-width(1024px) {
 		margin: 0;
-		padding: 0.5rem;
+		padding: 0.9rem 0.5rem 0.5rem;
 		font-size: 1.5rem;
 	}
 }
@@ -63,15 +63,14 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	@include flex-center;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 6px, rgba(0, 0, 0, 0.6) 0px 3px 6px;
 	width: 2rem;
 	height: 2rem;
-	padding: 0.3rem 0;
 	background: $msg-bubble-font;
 	color: $h1-color;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: 900;
-	text-align: center;
 	cursor: pointer;
 
 	&:hover {
@@ -116,7 +115,8 @@ input {
 .subscribe-btn {
 	border: 1px solid $overlay-bg;
 	margin-top: 1.5rem;
-	padding: 0.3rem;
+	// 0.55 to counter Varta font push to the top
+	padding: 0.55rem 0.3rem 0.3rem;
 	background: $chat-name-bg;
 	color: $h1-color;
 
@@ -130,6 +130,7 @@ input {
 	@include respond-to-width(1024px) {
 		width: 6.5rem;
 		height: 2.5rem;
+		padding-top: 0.45rem;
 		font-weight: 700;
 	}
 }
