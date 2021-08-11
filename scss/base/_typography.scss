@@ -25,19 +25,22 @@
 }
 
 @font-face {
-	font-family: 'Carrois Gothic';
-	src: url(../fonts/CarroisGothic-Regular.woff) format('woff');
+	font-family: 'Varta Regular';
+	src: url(../fonts/Varta-Regular.woff) format('woff');
 }
 
 // All fonts declared:
 html {
-	font-family: 'Carrois Gothic';
+	font-family: 'Varta Regular';
+	letter-spacing: 0.02rem;
 }
 
 input,
 select,
 textarea,
 button {
+	// 0.35 to counter Varta font push to the top
+	padding-top: 0.35rem;
 	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
@@ -55,7 +58,8 @@ h1 {
 
 h2 {
 	border-radius: $border-radius-primary;
-	padding: 0.4rem 1rem 0.2rem;
+	// 0.55rem to even out Varta font which pushes text to the top of the chatbox
+	padding: 0.55rem 1rem 0.2rem;
 	background: $chat-name-bg;
 	color: $h1-color;
 	font-size: 1rem;
@@ -68,7 +72,7 @@ h2 {
 
 	@include respond-to-width(1024px) {
 		margin-bottom: 0;
-		padding: 0;
+		padding: 0.55rem 0 0;
 		background: none;
 		font-size: 1.5rem;
 		font-weight: bold;
@@ -82,4 +86,9 @@ p {
 	@include respond-to-width(600px) {
 		line-height: 1.5;
 	}
+}
+
+// to even out Varta font which pushes text to the top of the chatbox
+div > p {
+	padding-top: 0.3125rem;
 }
