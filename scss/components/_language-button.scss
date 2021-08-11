@@ -1,11 +1,13 @@
 #language-selector {
+	border-radius: 50%;
 	position: fixed;
 	bottom: 1.1rem;
-	left: 0.6rem;
+	left: 0.8rem;
+	box-shadow: $box-shadow-2;
 
 	@include respond-to-width(1024px) {
 		top: 1.6rem;
-		right: 0.9rem;
+		right: 0.6rem;
 		bottom: initial;
 		left: initial;
 	}
@@ -14,21 +16,21 @@
 .croatian,
 .english {
 	display: block;
-	width: 3.47rem;
-	height: 3.47rem;
+	width: 3rem;
+	height: 3rem;
 
 	@include respond-to-width(1024px) {
-		width: 2.5rem;
-		height: 2.5rem;
+		width: 2.4rem;
+		height: 2.4rem;
 	}
 }
 
 .croatian {
-	background: url(../img/croatian.ico) no-repeat center center/cover;
+	background: url(../img/croatian.png) no-repeat center center/cover;
 }
 
 .english {
-	background: url(../img/english.ico) no-repeat center center/cover;
+	background: url(../img/english.png) no-repeat center center/cover;
 }
 
 .croatian:hover,

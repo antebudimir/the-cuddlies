@@ -17,6 +17,7 @@
 .bg-whatsapp {
 	@include round-button;
 	@include flex-center;
+	box-shadow: $box-shadow-2;
 }
 
 .bg-facebook {

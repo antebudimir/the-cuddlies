@@ -2,6 +2,7 @@
 	@include round-button;
 	border: none;
 	display: none;
+	box-shadow: $box-shadow-2;
 	position: fixed;
 	right: 0.8rem;
 	bottom: 5rem;
@@ -22,6 +23,7 @@
 }
 
 .icon-arrow-up2 {
+	@include flex-center;
 	font-size: 1.6rem;
 
 	&::before {
