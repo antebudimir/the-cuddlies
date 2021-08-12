@@ -2,7 +2,7 @@
 	"name": "The Cuddlies",
 	"short_name": "Cuddlies",
 	"description": "Illustrated love story in a messaging app format.",
-	"start_url": "https://thecuddlies.aliyabudimir.com/",
+	"start_url": "/",
 	"scope": ".",
 	"background_color": "#4c7972",
 	"theme_color": "#4c7972",
