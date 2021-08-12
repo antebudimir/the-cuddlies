@@ -15,8 +15,7 @@
 	}
 
 	@include respond-to-width(1024px) {
-		right: 0.8rem;
-		bottom: 8.5rem;
+		bottom: 7.5rem;
 		left: initial;
 		cursor: pointer;
 	}
@@ -24,7 +23,7 @@
 
 .icon-arrow-up2 {
 	@include flex-center;
-	padding: 0rem 0 0 0.1rem;
+	padding: 0 0 0.1rem 0.1rem;
 	font-size: 1.6rem;
 
 	&::before {
