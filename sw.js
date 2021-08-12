@@ -3,8 +3,8 @@ const preCacheName = `static-${version}`;
 const precache = [
 	'/',
 	'/fonts/AmaticSC-Bold.woff',
-	'/fonts/CarroisGothic-Regular.woff',
 	'/fonts/icomoon.woff',
+	'/fonts/Varta-Regular.woff',
 	'/404.html',
 	'/index.html',
 	'/about-us.html',
