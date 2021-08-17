@@ -124,8 +124,8 @@
 
 	window.addEventListener('scroll', () => {
 		if (
-			document.body.scrollTop > 1000 ||
-			document.documentElement.scrollTop > 1000
+			document.body.scrollTop > 600 ||
+			document.documentElement.scrollTop > 600
 		) {
 			toggle.style.display = 'initial';
 		} else {
