@@ -102,6 +102,7 @@
 	}
 }
 
+.chat-img:focus .lightbox p .img-thumb,
 .lightbox:focus p > .img-thumb {
 	@include pop-out-1;
 }

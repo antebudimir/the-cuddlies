@@ -1,3 +1,4 @@
+// Share buttons
 #sharing-links {
 	z-index: 1;
 	position: fixed;
@@ -13,27 +14,34 @@
 	}
 }
 
-.bg-facebook,
-.bg-whatsapp {
-	@include round-button;
-	@include flex-center;
-	box-shadow: $box-shadow-2;
-	padding: 0rem 0 0 0.1rem;
+.sharing-link,
+.sharing-link.open {
+	opacity: 1;
+	position: relative;
+	border: none;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 3rem;
+	height: 3rem;
+	margin: 0.5rem 0;
+	transition: all 200ms;
+
+	&:hover,
+	&:focus {
+		@include pop-out-2;
+	}
+
+	@include respond-to-width(1024px) {
+		cursor: pointer;
+	}
 }
 
-.bg-facebook {
-	margin-bottom: 0.7rem;
-	background: $facebook-bg;
+.sharing-link {
+	background: $header-bg;
 }
 
-.bg-whatsapp {
-	background: $whatsapp-bg;
-}
-
-.bg-facebook:hover,
-.bg-whatsapp:hover,
-#sharing-links a:focus {
-	@include pop-out-2;
+.icon-share2:before {
+	content: '\ea82';
 }
 
 .icon-facebook:before {
@@ -44,11 +52,64 @@
 	content: '\ea93';
 }
 
-.icon-facebook,
-.icon-whatsapp {
-	font-size: 1.6rem;
+.facebook,
+.whatsapp {
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
 }
 
-.icon-facebook {
-	margin-top: 0.2rem;
+.icon-share2,
+#sharing-links .icon-x,
+.icon-facebook,
+.icon-whatsapp {
+	// color: rgb(255, 255, 255);
+	font-size: 1.5rem;
+	@include round-button;
+	@include flex-center;
+	box-shadow: $box-shadow-2;
+	padding: 0rem 0 0 0.1rem;
+}
+
+.facebook {
+	background: rgb(60, 91, 155);
+}
+
+.whatsapp {
+	background: rgb(11, 194, 4);
+}
+
+.toggle,
+.toggle .icon-x {
+	display: none;
+}
+
+.toggle {
+	&.open .icon-x {
+		display: initial;
+		transform: rotate(0) scale(1);
+	}
+
+	&.open .icon-share2 {
+		display: none;
+		transform: rotate(90deg) scale(0);
+	}
+
+	&.facebook {
+		transition-delay: 50ms;
+	}
+
+	&.whatsapp {
+		transition-delay: 0ms;
+	}
+
+	&.open:hover > .icon-x,
+	&.open:hover {
+		background: $header-bg;
+		color: white;
+		padding-top: 0.25rem;
+	}
 }
