@@ -1,52 +1,52 @@
 // Register SW
-// if ('serviceWorker' in navigator) {
-// 	// register him
-// 	navigator.serviceWorker
-// 		.register('/sw.js', {
-// 			updateViaCache: 'none',
-// 			scope: '/',
-// 		})
-// 		.then(() => {
-// 			// finished registering
-// 		})
-// 		.catch((err) => {
-// 			console.warn('Failed to register', err.message);
-// 		});
+if ('serviceWorker' in navigator) {
+	// register him
+	navigator.serviceWorker
+		.register('/sw.js', {
+			updateViaCache: 'none',
+			scope: '/',
+		})
+		.then(() => {
+			// finished registering
+		})
+		.catch((err) => {
+			console.warn('Failed to register', err.message);
+		});
 
-// 	// listen for messages
-// 	navigator.serviceWorker.addEventListener('message', ({ data }) => {
-// 		// received a message from the service worker
-// 		console.log(data, 'New message from your service worker.');
-// 	});
-// }
+	// listen for messages
+	navigator.serviceWorker.addEventListener('message', ({ data }) => {
+		// received a message from the service worker
+		console.log(data, 'New message from your service worker.');
+	});
+}
 
-// // SYNC
-// async function registerPeriodicCheck() {
-// 	const registration = await navigator.serviceWorker.ready;
-// 	try {
-// 		await registration.periodicSync.register('latest-update', {
-// 			minInterval: 24 * 60 * 60 * 1000,
-// 		});
-// 	} catch {
-// 		console.log('Periodic Sync could not be registered!');
-// 	}
-// }
+// SYNC
+async function registerPeriodicCheck() {
+	const registration = await navigator.serviceWorker.ready;
+	try {
+		await registration.periodicSync.register('latest-update', {
+			minInterval: 24 * 60 * 60 * 1000,
+		});
+	} catch {
+		console.log('Periodic Sync could not be registered!');
+	}
+}
 
-// navigator.serviceWorker.ready.then((registration) => {
-// 	registration.periodicSync.getTags().then((tags) => {
-// 		if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
-// 	});
-// });
+navigator.serviceWorker.ready.then((registration) => {
+	registration.periodicSync.getTags().then((tags) => {
+		if (tags.includes('latest-update')) skipDownloadingLatestUpdateOnPageLoad();
+	});
+});
 
-// // Detect when the PWA was successfully installed
-// window.addEventListener('appinstalled', () => {
-// 	// Hide the app-provided install promotion
-// 	hideInstallPromotion();
-// 	// Clear the deferredPrompt so it can be garbage collected
-// 	deferredPrompt = null;
-// 	// Send analytics event to indicate successful install
-// 	console.log('The Cuddlies PWA was installed.');
-// });
+// Detect when the PWA was successfully installed
+window.addEventListener('appinstalled', () => {
+	// Hide the app-provided install promotion
+	hideInstallPromotion();
+	// Clear the deferredPrompt so it can be garbage collected
+	deferredPrompt = null;
+	// Send analytics event to indicate successful install
+	console.log('The Cuddlies PWA was installed.');
+});
 
 // SUBSCRIBE modal
 (function subscribe() {
@@ -88,7 +88,7 @@
 	// Mobile window scroll back to top button
 	if (window.innerWidth < 1024) {
 		window.addEventListener('scroll', () => {
-			if (document.documentElement.scrollTop > 600) {
+			if (document.documentElement.scrollTop > 800) {
 				scrollButton.style.display = 'block';
 			} else {
 				scrollButton.style.display = 'none';
@@ -122,23 +122,26 @@
 (function sharingLinks() {
 	const toggle = document.querySelector('.toggle');
 
-	window.addEventListener('scroll', () => {
-		if (
-			document.body.scrollTop > 600 ||
-			document.documentElement.scrollTop > 600
-		) {
-			toggle.style.display = 'initial';
-		} else {
-			toggle.style.display = 'none';
-		}
-	});
+	// Mobile window sharing button
+	if (window.innerWidth < 1024) {
+		window.addEventListener('scroll', () => {
+			if (
+				document.body.scrollTop > 600 ||
+				document.documentElement.scrollTop > 600
+			) {
+				toggle.style.display = 'initial';
+			} else {
+				toggle.style.display = 'none';
+			}
+		});
+	}
 
 	toggle.addEventListener('click', () => {
 		const sharingLinks = document.querySelectorAll('.sharing-link');
 
-		for (let i = 0; i < sharingLinks.length; i++) {
-			sharingLinks[i].classList.toggle('open');
-		}
+		sharingLinks.forEach((link) => {
+			link.classList.toggle('open');
+		});
 	});
 })();
 

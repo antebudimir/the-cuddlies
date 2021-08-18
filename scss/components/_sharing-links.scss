@@ -14,6 +14,7 @@
 	}
 }
 
+.toggle,
 .icon-share2,
 #sharing-links .icon-x,
 .facebook,
@@ -21,15 +22,20 @@
 	@include round-button;
 	@include flex-center;
 	box-shadow: $box-shadow-2;
-	padding: 0 0 0 0.1rem;
 }
 
+#sharing-links .icon-x,
+.facebook,
+.whatsapp {
+	padding-left: 0.1rem;
+}
+
+.toggle,
 .icon-share2 {
 	background: $header-bg;
 }
 
 .facebook {
-	margin-bottom: 0.7rem;
 	background: $facebook-bg;
 }
 
@@ -37,11 +43,11 @@
 	background: $whatsapp-bg;
 }
 
-// .bg-facebook:hover,
-// .bg-whatsapp:hover,
-// #sharing-links a:focus {
-// 	@include pop-out-2;
-// }
+.bg-facebook:hover,
+.bg-whatsapp:hover,
+#sharing-links a:focus {
+	@include pop-out-2;
+}
 
 .icon-facebook:before {
 	content: '\ea90';
@@ -55,7 +61,10 @@
 	content: '\ea82';
 }
 
-.icon-share2,
+.icon-share2 {
+	font-size: 1.4rem;
+}
+
 .icon-facebook,
 .icon-whatsapp {
 	font-size: 1.6rem;
@@ -64,7 +73,6 @@
 .icon-facebook {
 	margin-top: 0.3rem;
 }
-// ffffffffffffffffffffffffff
 
 .sharing-link,
 .sharing-link.open {
@@ -75,16 +83,19 @@
 	overflow: hidden;
 	width: 3rem;
 	height: 3rem;
-	margin: 0.5rem 0;
 	transition: all 200ms;
-
-	&:hover,
-	&:focus {
-		@include pop-out-2;
-	}
 
 	@include respond-to-width(1024px) {
 		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			@include pop-out-2;
+		}
+	}
+
+	&.open:not(:last-of-type) {
+		margin: 0.8rem 0;
 	}
 }
 
@@ -95,7 +106,14 @@
 	width: 0;
 	height: 0;
 	margin: 0;
-	padding: 0;
+
+	@include respond-to-width(1024px) {
+		opacity: 1;
+		overflow: initial;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-top: 0.7rem;
+	}
 }
 
 .toggle,
@@ -104,6 +122,9 @@
 }
 
 .toggle {
+	margin: 0;
+	padding: 0;
+
 	&.open .icon-x {
 		display: initial;
 		transform: rotate(0) scale(1);
@@ -120,12 +141,5 @@
 
 	&.whatsapp {
 		transition-delay: 0ms;
-	}
-
-	&.open:hover > .icon-x,
-	&.open:hover {
-		background: $header-bg;
-		color: white;
-		padding-top: 0.25rem;
 	}
 }
